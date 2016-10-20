@@ -3,7 +3,8 @@ import {
   SET_PATH,
   INSERT_BOT,
   FETCH_BOTS,
-  FETCH_BOT_DETAILS
+  FETCH_BOT_DETAILS,
+  FETCH_USER_DETAILS
 } from './BotBoardActions';
 
 import R from 'ramda';
@@ -30,6 +31,8 @@ const BotBoardReducer = (state = initialState, action) => {
       return R.assoc('list', action.bots, state);
     case FETCH_BOT_DETAILS:
       return R.assoc('botDetails', action.details, state);
+    case FETCH_USER_DETAILS:
+      return R.assoc('userDetails', action.details, state);
     default:
       return state;
   }

@@ -49,3 +49,13 @@ export function getBot(req, res) {
     }));
   })
 }
+
+export function getUser(req, res) {
+  res.json({
+    _id: 1,
+    bot: "sdfijfsg",
+    name: 'Shai Alon',
+    gender: "male",
+    created : "2016-10-20T13:51:59.968Z"
+  })
+}

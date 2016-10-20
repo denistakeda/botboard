@@ -10,4 +10,7 @@ router.route('/bots')
 router.route('/bots/:botId')
   .get(BotController.getBot);
 
+router.route('/bots/:botId/users/:userId')
+  .get(BotController.getUser);
+
 export default router;

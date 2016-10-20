@@ -6,6 +6,7 @@ export const SET_PATH = 'SET_PATH';
 export const INSERT_BOT = 'INSERT_BOT';
 export const FETCH_BOTS = 'FETCH_BOTS';
 export const FETCH_BOT_DETAILS = 'FETCH_BOT_DETAILS';
+export const FETCH_USER_DETAILS = 'FETCH_USER_DETAILS';
 
 // Export Actions
 export const setPath = (path, value) => ({
@@ -29,6 +30,11 @@ export const fetchBotDetails = details => ({
   details,
 });
 
+export const fetchUserDetails = details => ({
+  type: FETCH_USER_DETAILS,
+  details,
+});
+
 export const addBot = botData => dispatch =>
   callApi('bots', 'post', botData)
     .then(res => dispatch(insertBot(res)))
@@ -41,4 +47,8 @@ export const getBots = () => dispatch =>
 export const getBotDetails = id => dispatch =>
   callApi(`bots/${id}`, 'get')
     .then(res => dispatch(fetchBotDetails(res)));
+
+export const getUserDetails = (botId, userId) => dispatch =>
+  callApi(`bots/${botId}/users/${userId}`, 'get')
+    .then(res => dispatch(fetchUserDetails(res)))
 
