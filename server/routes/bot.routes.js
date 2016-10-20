@@ -7,4 +7,7 @@ router.route('/bots')
   .get(BotController.getBots)
   .post(BotController.addBot);
 
+router.route('/bots/:botId')
+  .get(BotController.getBot);
+
 export default router;

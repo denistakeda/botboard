@@ -5,6 +5,7 @@ const Bot = new Schema({
   name: { type: 'String', required: true },
   status: { type: 'String', required: true },
   created: { type: 'Date', default: Date.now, required: true },
+  users: [],
 });
 
-export default mongoose.model('BotBoard', Bot);
+export default mongoose.model('Bot', Bot);

@@ -6,3 +6,11 @@
 .bots-list {
   margin-top: 1rem;
 }
+
+.add-button {
+  float: left;
+}
+
+.filter {
+  float: right;
+}

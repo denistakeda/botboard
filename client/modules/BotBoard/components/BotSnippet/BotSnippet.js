@@ -5,6 +5,8 @@ import setPropTypes from 'recompose/setPropTypes';
 import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes';
 import flattenProp from 'recompose/flattenProp';
 import moment from 'moment';
+import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router';
 
 import styles from './BotSnippet.css';
 
@@ -15,6 +17,7 @@ const enhance = compose(
     name: PropTypes.string,
     status: PropTypes.string,
     created: PropTypes.string,
+    _id: PropTypes.string,
 
     className: PropTypes.string,
   }),
@@ -25,6 +28,7 @@ const BotSnippet = enhance(({
   name,
   status,
   created,
+  _id,
   className,
 }) => {
   return (
@@ -32,12 +36,20 @@ const BotSnippet = enhance(({
       <div className={ styles['snippet'] }>
 
         <div className={ `${styles['tytle']} clearfix` }>
-          <div className={styles['name']}>{ name }</div>
+          <div className={styles['name']}>
+            <Link to={ `/bots/${_id}` }>
+              { name }
+            </Link>
+          </div>
           <div className={`${styles['status']} ${styles[status]}`}>{ status }</div>
         </div>
 
         <div className={ styles['date'] }>
           { moment(created).fromNow() }
+        </div>
+
+        <div className={ styles['links'] }>
+
         </div>
       </div>
     </div>

@@ -7,6 +7,9 @@ export default {
     suspended: 'Suspended',
     draft: 'Draft',
     paused: "Paused",
+    dashboard: "Dashboard",
+    people: "People",
+    all: "All",
 
     siteTitle: 'MERN Starter Blog',
     addPost: 'Add Post',

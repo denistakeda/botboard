@@ -40,6 +40,14 @@ export default (
       }}
     />
     <Route
+      path="/bots/:botId"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/BotBoard/pages/BotDetailPage/BotDetailPage').default);
+        });
+      }}
+    />
+    <Route
       path="/posts/:slug-:cuid"
       getComponent={(nextState, cb) => {
         require.ensure([], require => {

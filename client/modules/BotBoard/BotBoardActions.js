@@ -5,6 +5,7 @@ import { browserHistory } from 'react-router';
 export const SET_PATH = 'SET_PATH';
 export const INSERT_BOT = 'INSERT_BOT';
 export const FETCH_BOTS = 'FETCH_BOTS';
+export const FETCH_BOT_DETAILS = 'FETCH_BOT_DETAILS';
 
 // Export Actions
 export const setPath = (path, value) => ({
@@ -23,6 +24,11 @@ export const fetchBots = bots => ({
   bots
 });
 
+export const fetchBotDetails = details => ({
+  type: FETCH_BOT_DETAILS,
+  details,
+});
+
 export const addBot = botData => dispatch =>
   callApi('bots', 'post', botData)
     .then(res => dispatch(insertBot(res)))
@@ -31,4 +37,8 @@ export const addBot = botData => dispatch =>
 export const getBots = () => dispatch =>
   callApi('bots', 'get')
     .then(res => dispatch(fetchBots(res)));
+
+export const getBotDetails = id => dispatch =>
+  callApi(`bots/${id}`, 'get')
+    .then(res => dispatch(fetchBotDetails(res)));
 
