@@ -1,6 +1,13 @@
 export default {
   locale: 'en',
   messages: {
+    addBot: 'Add Bot',
+    name: 'Name',
+    published: 'Published',
+    suspended: 'Suspended',
+    draft: 'Draft',
+    paused: "Paused",
+
     siteTitle: 'MERN Starter Blog',
     addPost: 'Add Post',
     switchLanguage: 'Switch Language',

@@ -27,7 +27,15 @@ export default (
     <IndexRoute
       getComponent={(nextState, cb) => {
         require.ensure([], require => {
-          cb(null, require('./modules/Post/pages/PostListPage/PostListPage').default);
+          cb(null, require('./modules/BotBoard/pages/BotBoardPage/BotBoardPage').default);
+        });
+      }}
+    />
+    <Route
+      path="/bots/new"
+      getComponent={(nextState, cb) => {
+        require.ensure([], require => {
+          cb(null, require('./modules/BotBoard/pages/AddBotPage/AddBotPage').default);
         });
       }}
     />
