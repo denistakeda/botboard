@@ -1,13 +1,10 @@
 import React, {PropTypes} from 'react';
 import compose from 'recompose/compose';
-import setDisplayName from 'recompose/setDisplayName';
 import setPropTypes from 'recompose/setPropTypes';
 import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes';
 import flattenProp from 'recompose/flattenProp';
 import moment from 'moment';
-import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router';
-
 import styles from './BotSnippet.css';
 
 

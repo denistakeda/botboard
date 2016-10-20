@@ -1,12 +1,6 @@
 import React, {PropTypes, PureComponent} from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router';
-import BotStatuses from '../../configs/BotStatuses';
-import compose from 'recompose/compose';
-import setPropTypes from 'recompose/setPropTypes';
-import onlyUpdateForPropTypes from 'recompose/onlyUpdateForPropTypes';
 import R from 'ramda';
 import { getBotDetails } from '../../BotBoardActions';
 import moment from 'moment';
