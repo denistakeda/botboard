@@ -46,7 +46,8 @@ const BotSnippet = enhance(({
         </div>
 
         <div className={ styles['links'] }>
-
+          <Link to="/">Dashboard</Link> |
+          <Link to={ `/bots/${_id}` }>People</Link>
         </div>
       </div>
     </div>
