@@ -1,7 +1,8 @@
 // Import Actions
 import {
   SET_PATH,
-  INSERT_BOT
+  INSERT_BOT,
+  FETCH_BOTS
 } from './BotBoardActions';
 
 import R from 'ramda';
@@ -23,6 +24,8 @@ const BotBoardReducer = (state = initialState, action) => {
       return R.assocPath(action.path, action.value, state);
     case INSERT_BOT:
       return R.evolve({list: R.append(action.botStatus)}, state);
+    case FETCH_BOTS:
+      return R.assoc('list', action.bots, state);
     default:
       return state;
   }

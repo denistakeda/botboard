@@ -1,0 +1,41 @@
+.snippet {
+  background-color: white;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid whitesmoke;
+}
+
+.name {
+  float: left;
+  font-size: 1.2rem;
+}
+
+.status {
+  float: right;
+  color: white;
+  font-size: .8rem;
+  border-radius: .3rem;
+  padding-left: .3rem;
+  padding-right: .3rem;
+}
+
+.published {
+  background-color: green;
+}
+
+.suspended {
+  background-color: red;
+}
+
+.paused {
+  background-color: burlywood;
+}
+
+.draft {
+  background-color: blue;
+}
+
+.date {
+  font-size: .8rem;
+  color: lightgray;
+}

@@ -4,6 +4,7 @@ import * as BotController from '../controllers/bot.controller';
 const router = new Router();
 
 router.route('/bots')
-  .post(BotController.addBot)
+  .get(BotController.getBots)
+  .post(BotController.addBot);
 
 export default router;
